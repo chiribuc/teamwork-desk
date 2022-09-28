@@ -1,0 +1,48 @@
+{
+  "name": "chiribuc/teamwork-desk",
+  "description": "Teamwork Desk PHP SDK",
+  "keywords": ["chiribuc", "teamwork-desk", "php", "sdk", "api", "client"],
+  "homepage": "https://github.com/chiribuc/teamwork-desk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert-Cristian Chiribuc",
+      "email": "me@crobert.ro",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.5.0"
+  },
+  "require-dev": {
+    "nunomaduro/collision": "^6.3",
+    "pestphp/pest": "^1.20",
+    "pestphp/pest-plugin-mock": "^1.0",
+    "phpstan/phpstan": "^1.8",
+    "spatie/ray": "^1.28"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chiribuc\\Teamwork\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Chiribuc\\Teamwork\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
