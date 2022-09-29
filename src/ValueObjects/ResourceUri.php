@@ -26,6 +26,14 @@ final class ResourceUri implements Stringable
     }
 
     /**
+     * Creates a new ResourceUri value object that updates the given resource.
+     */
+    public static function update(string $resource, int $id): self
+    {
+        return new self("{$resource}/{$id}.json");
+    }
+
+    /**
      * Creates a new ResourceUri value object that uploads to the given resource.
      */
     public static function upload(string $resource): self
@@ -36,23 +44,23 @@ final class ResourceUri implements Stringable
     /**
      * Creates a new ResourceUri value object that lists the given resource.
      */
-    public static function list(string $resource): self
+    public static function list(string $resource, string $query): self
     {
-        return new self("{$resource}.json");
+        return new self("{$resource}.json{$query}");
     }
 
     /**
      * Creates a new ResourceUri value object that retrieves the given resource.
      */
-    public static function retrieve(string $resource, string $id): self
+    public static function retrieve(string $resource, int $id, string $query): self
     {
-        return new self("{$resource}/{$id}.json");
+        return new self("{$resource}/{$id}.json{$query}");
     }
 
     /**
      * Creates a new ResourceUri value object that deletes the given resource.
      */
-    public static function delete(string $resource, string $id): self
+    public static function delete(string $resource, int $id): self
     {
         return new self("{$resource}/{$id}.json");
     }
