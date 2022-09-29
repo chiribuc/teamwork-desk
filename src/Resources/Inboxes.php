@@ -11,33 +11,36 @@ final class Inboxes
     use Concerns\Transportable;
 
     /**
-     * List all inboxes available.
+     * List all resources available.
+     *
+     * @param array $parameters (optional) filter, includes
      *
      * @return array
      * @throws \Chiribuc\Teamwork\Exceptions\ErrorException
      * @throws \Chiribuc\Teamwork\Exceptions\TransporterException
      * @throws \Chiribuc\Teamwork\Exceptions\UnserializableResponseException
      */
-    public function list(): array
+    public function list(array $parameters = []): array
     {
-        $payload = Payload::list(resource: 'inboxes');
+        $payload = Payload::list(resource: 'inboxes', parameters: $parameters);
 
         return $this->transporter->requestObject(payload: $payload);
     }
 
     /**
-     * Retrieves an inbox data by ID.
+     * Retrieves resource by ID.
      *
-     * @param string $id the id of the inbox to retrieve.
+     * @param int   $id         the id of resource.
+     * @param array $parameters (optional) filter, includes
      *
      * @return array
      * @throws \Chiribuc\Teamwork\Exceptions\ErrorException
      * @throws \Chiribuc\Teamwork\Exceptions\TransporterException
      * @throws \Chiribuc\Teamwork\Exceptions\UnserializableResponseException
      */
-    public function find(string $id): array
+    public function find(int $id, array $parameters = []): array
     {
-        $payload = Payload::retrieve(resource: 'inboxes', id: $id);
+        $payload = Payload::retrieve(resource: 'inboxes', id: $id, parameters: $parameters);
 
         return $this->transporter->requestObject(payload: $payload);
     }

@@ -25,17 +25,19 @@
   "autoload": {
     "psr-4": {
       "Chiribuc\\Teamwork\\": "src"
-    }
+    },
+    "files": [
+      "src/Desk.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
-      "Chiribuc\\Teamwork\\Tests\\": "tests"
+      "Tests\\": "tests/"
     }
   },
   "scripts": {
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    "test": "vendor/bin/pest --colors=always",
+    "test-coverage": "vendor/bin/pest --coverage"
   },
   "config": {
     "sort-packages": true,

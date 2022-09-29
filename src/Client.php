@@ -6,7 +6,9 @@ namespace Chiribuc\Teamwork;
 
 use Chiribuc\Teamwork\Contracts\Transporter;
 use Chiribuc\Teamwork\Resources\AuthenticatedUser;
+use Chiribuc\Teamwork\Resources\Customers;
 use Chiribuc\Teamwork\Resources\Inboxes;
+use Chiribuc\Teamwork\Resources\TicketPriorities;
 
 final class Client
 {
@@ -36,5 +38,25 @@ final class Client
     public function inboxes(): Inboxes
     {
         return new Inboxes(transporter: $this->transporter);
+    }
+
+    /**
+     * Customers resources.
+     *
+     * @return \Chiribuc\Teamwork\Resources\Customers
+     */
+    public function customers(): Customers
+    {
+        return new Customers(transporter: $this->transporter);
+    }
+
+    /**
+     * TicketPriorities resources.
+     *
+     * @return \Chiribuc\Teamwork\Resources\TicketPriorities
+     */
+    public function ticketPriorities(): TicketPriorities
+    {
+        return new TicketPriorities(transporter: $this->transporter);
     }
 }
