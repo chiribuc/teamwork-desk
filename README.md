@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/chiribuc/teamwork-desk.svg)](https://packagist.org/packages/chiribuc/teamwork-desk)
 [![Tests](https://github.com/chiribuc/teamwork-desk/actions/workflows/run-tests.yml/badge.svg)](https://github.com/chiribuc/teamwork-desk/actions?query=workflow%3Arun-tests)
 [![Total Downloads](https://img.shields.io/packagist/dt/chiribuc/teamwork-desk.svg)](https://packagist.org/packages/chiribuc/teamwork-desk)
-[![License](https://img.shields.io/packagist/l/the-bug-software/data-gov-ro.svg)](https://github.com/chiribuc/teamwork-desk/blob/main/README.md)
+[![License](https://img.shields.io/packagist/l/chiribuc/teamwork-desk.svg)](https://github.com/chiribuc/teamwork-desk/blob/main/LICENSE.md)
 
 -----
 
@@ -27,7 +27,12 @@ composer require chiribuc/teamwork-desk
 ## Usage
 
 ```php
+use Chiribuc\Teamwork\Desk;
+
+$teamwork = Desk::client('api_token', 'domain');
+
 // TODO
+
 ```
 
 ## Testing
@@ -42,7 +47,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
+Please feel free to fork and open pull requests.
 
 ## Security Vulnerabilities
 
