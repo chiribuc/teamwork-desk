@@ -7,11 +7,11 @@
 
 -----
 
-[![Stand With Ukraine](https://user-images.githubusercontent.com/46414598/191076542-6fe6dc3a-8d98-463b-86d6-78dbb1e3dbc8.svg)](https://supportukrainenow.org/)
+![teamwork-desk](https://user-images.githubusercontent.com/46414598/233759405-2624fdf2-59a1-49ba-a577-e3e55ab780b6.svg)
 
 -----
 
-**Teamwork Desk PHP SDK** is a PHP API client that allows you to interact with the [Teamwork Desk API](https://apidocs.teamwork.com).  
+**Teamwork Desk PHP SDK** is a client that allows you to interact with the [Teamwork Desk API](https://apidocs.teamwork.com).  
 
 > This project is a work-in-progress. Code and documentation are currently under development and are subject to change.
 
